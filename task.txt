@@ -1,0 +1,11 @@
+Create a RESTful API that will allow:
+User Registration
+User Login
+User can CRUD shapes:
+Triangle
+Rectangle
+Square
+Diamond
+User can request for shapes:
+Area
+Perimeter

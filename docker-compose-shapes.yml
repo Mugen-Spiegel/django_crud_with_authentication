@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: python-env
+    container_name: shapes
+    # command: -c "cd /var/www/html/inventory && python3 manage.py migrate store && python3 manage.py loaddata initial_data.json &&  python3 manage.py runserver 0.0.0.0:3000"
+    networks:
+      - shapes
+    ports:
+      - 8011:8011
+      - 3003:3003
+      - 3004:3004
+    volumes:
+      # - location-of-application-on-your-pc:/var/www/html/inventory
+      - C:\Users\NOC-986\Desktop\SHAPES:/var/www/html/shapes
+    tty: true
+    stdin_open: true
+    # depends_on:
+    #  - database
+networks:
+  shapes:
+    driver: bridge
